@@ -7,10 +7,10 @@ This Ansible role accept/reject the Prism EULA after the initial deployment of e
 
 | Variable                                          | Required | Default | Choices                   | Comments                                                                                               |
 |---------------------------------------------------|----------|---------|---------------------------|--------------------------------------------------------------------------------------------------------|
-| nutanix_pulse_host                                | yes      |         |                           | The IP address or FQDN for the Prism (Element or Central) where you want to configure pulse.           |
-| nutanix_pulse_username                            | no       | "admin" |                           | A valid username with appropriate rights to access the Nutanix API. where you want to configure pulse. |
-| nutanix_pulse_password                            | yes      |         |                           | A valid password for the supplied username.  where you want to configure pulse.                        |
-| nutanix_pulse_port                                | no       | 9440    |                           | The Prism TCP port  where you want to configure pulse.                                                 |
+| nutanix_pulse_host                                | yes      |         |                           | The IP address or FQDN for the Prism (Element or Central) where you want to accept the EULA.           |
+| nutanix_pulse_username                            | no       | "admin" |                           | A valid username with appropriate rights to access the Nutanix API where you want to accept the EULA.  |
+| nutanix_pulse_password                            | yes      |         |                           | A valid password for the supplied username where you want to accept the EULA.                          |
+| nutanix_pulse_port                                | no       | 9440    |                           | The Prism TCP port where you want to accept the EULA.                                                  |
 | validate_certs                                    | no       | no      | yes / no                  | Whether to check if Prism UI certificates are valid.                                                   |
 | nutanix_debug                                     | no       | False   | True / False              | Whether to output variable contents for debugging purposes.                                            |
 | nutanix_deploy_pc_eula_accept                     | no       | False   | True / False              | If ELUA is set to True the full_name, company and role variables are mandatory.                        |
