@@ -37,7 +37,8 @@
       - name: Debug nutanix_prism_eula_accept_eula.json
         debug:
           var: nutanix_prism_eula_accept_eula.json
-        when: nutanix_debug
+        when:
+          - nutanix_debug
 
       - ansible.builtin.fail:
           msg: "the prism EULA acceptance failed."
