@@ -2,7 +2,7 @@
     block:
       - name: Generate authorization string for "{{ nutanix_prism_eula_host }}"
         set_fact:
-          nutanix_prism_eula_auth_string: "{{ nutanix_prism_eula_username }}:{{ nutani_prism_eula_password }}"
+          nutanix_prism_eula_auth_string: "{{ nutanix_prism_eula_username }}:{{ nutanix_prism_eula_password }}"
         no_log: True
 
       - name: Generate authorization header for "{{ nutanix_prism_eula_host }}"
