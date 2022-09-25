@@ -17,9 +17,9 @@
           - nutanix_prism_eula_company_name is not defined or nutanix_prism_eula_company_name == ""
           - nutanix_prism_eula_job_title is not defined or nutanix_prism_eula_job_title == ""
 
-      - name: Accept EULA on "{{ nutanix_pulse_host }}"
+      - name: Accept EULA on "{{ nutanix_prism_eula_host }}"
         uri:
-          url: "https://{{ nutanix_deploy_pc_ip_address }}:{{ nutanix_port }}/PrismGateway/services/rest/v1/eulas/accept"
+          url: "https://{{ nutanix_prism_eula_host }}:{{ nutanix_prism_eula_port }}/PrismGateway/services/rest/v1/eulas/accept"
           method: POST
           validate_certs: "{{ validate_certs }}"
           body_format: json
@@ -34,8 +34,9 @@
         register: nutanix_prism_eula_accept_eula
         ignore_errors: no
 
-      - debug:
-          var: nutanix_prism_eula_accept_eula
+      - name: Debug nutanix_prism_eula_accept_eula.json
+        debug:
+          var: nutanix_prism_eula_accept_eula.json
         when: nutanix_debug
 
       - ansible.builtin.fail:
