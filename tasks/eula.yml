@@ -34,6 +34,10 @@
         register: nutanix_prism_eula_accept_eula
         ignore_errors: no
 
+      - debug:
+          var: nutanix_prism_eula_accept_eula
+        when: nutanix_debug
+
       - ansible.builtin.fail:
           msg: "the prism EULA acceptance failed."
         when:
