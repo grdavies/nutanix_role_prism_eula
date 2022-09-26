@@ -11,4 +11,4 @@
     nutanix_prism_eula_full_name: Ross Davies
     nutanix_prism_eula_company_name: Nutanix
     nutanix_prism_eula_job_title: SE
-    nutanix_debug: True
+    # nutanix_debug: True
