@@ -10,7 +10,7 @@
         nutanix_prism_eula_auth_api: "Basic {{ nutanix_prism_eula_auth_string | b64encode(encoding='ascii') }}"
       no_log: True
 
-    - name: Accept EULA on "{{ nutanix_prism_eula_host }}"
+    - name: "Accept EULA"
       uri:
         url: "https://{{ nutanix_prism_eula_host }}:{{ nutanix_prism_eula_port }}/PrismGateway/services/rest/v1/eulas/accept"
         method: POST
